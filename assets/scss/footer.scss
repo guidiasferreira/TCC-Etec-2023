@@ -1,0 +1,88 @@
+footer {
+    @include heightWidth(15vh,100%);
+    @include bgcolorColor(#2C1A1D,white);
+    @include flexAlign(start,end,row);
+    gap: 20%;
+
+    p{
+        font-size: .8vw;
+    }
+    .titulo{
+        font-size: 1vw;
+    }
+
+    a{
+        font-size: 1vw;
+    }
+
+
+    .divInfo {
+        @include flexAlign(center,normal,row);
+        @include heightWidth(inherit,60%);
+        gap: 1%; //gap de 0.4vw
+
+        .emailSuporte{
+            @include flexAlign(center,between,column);
+            width: 25%;
+            gap: 20%;
+
+            p{
+                font-size: 1vw;
+            }
+        }
+
+        .localizacao,.divTel,.emailSuporte{
+            @include flexAlign(center,center,column);
+            border-right: .1vw solid white;
+            height: 100%;
+        }
+        .endereco,.tel {
+            @include flexAlign (center,center,row);
+            height: 30%;
+            font-size: 1.5vw;
+            gap: 5%;
+        }
+        .localizacao {
+            width: 30%; //18vw
+
+            .endereco {
+                width: 100%;
+            
+                p {
+                    width: 45%;
+            
+                }
+            }
+        }
+        .divTel {
+            width: 20%; //12vw
+
+            .iconFooter {
+                font-size: 1.3vw;
+            }
+            .tel {
+                width: 80%;
+
+                #telefone {
+                    color: rgb(255, 255, 255);
+                }
+                #whatsapp{
+                    color: rgb(0, 255, 0);
+                }
+            }
+        }
+        .socialIcons {
+            @include flexAlign(center,center,row);
+            @include heightWidth(100%,12.75%);
+            gap: 8%;
+        
+            a{
+                @include heightWidth (4vh,100%);
+        
+                img{
+                    @include heightWidth (100%,100%);
+                }
+            }
+        }
+    } 
+}

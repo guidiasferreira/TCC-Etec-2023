@@ -1,0 +1,75 @@
+.divCarousels {
+    @include flexAlign(normal,normal,column);
+    width: 95%;
+    gap: 10vh;
+
+    .carousel {
+        @include flexAlign (start,start,column);
+        gap: 2.5vw;
+
+        .text {
+            width: 10vw;
+            text-align: center;
+            border: .2vw solid #6c534e;
+            border-radius: 0 01vw 0 1vw;
+            background-color: $bghColor;
+    
+            h1 {
+                font-size: 1.9vw;
+            }
+        }
+        .swiper {
+            @include flexAlign(center,center,row);
+            @include heightWidth(45vh,100%);
+
+            .swiper-slide {
+                @include flexAlign(center,center,row);
+                @include heightWidth(100%,100%);
+                position: relative;
+
+                .project-img {
+                    @include flexAlign(center,center,row);
+                    @include heightWidth(100%,95%);
+                    gap: 6%;
+
+                    .carouselImg {
+                        @include flexAlign(center,start,column);
+                        @include heightWidth(100%,14%);
+                    
+                        img {
+                            @include heightWidth(80%,100%);
+                            position: relative;
+                        }
+                        .carouselText {
+                            @include flexAlign(center,center,row);
+                            @include bgcolorColor(rgb(112, 85, 72),white);
+                            @include heightWidth(20%,100%);
+                            font-size: 1vw;
+                            cursor: pointer;
+                            border-radius: 0 0 1vw 1vw;
+                        }
+                    }
+                }
+            }
+            .swiper-pagination {
+                position: absolute;
+                bottom: -300vh;
+            }
+            .swiper-pagination-bullet {
+                height: 1vh;
+            }
+            .swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,
+            .swiper-pagination-custom,.swiper-pagination-fraction {
+                bottom: -1%;
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+
+

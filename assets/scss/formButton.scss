@@ -1,0 +1,13 @@
+.formButton{
+    @include heightWidth(5vh,80%);
+    padding: 6%;
+	border: none;
+	border-radius: 17vw;
+    font-size: .9vw; 
+
+    &::placeholder{
+        color: #000000;
+        font-size: .9vw; 
+    }
+
+}

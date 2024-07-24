@@ -1,0 +1,80 @@
+@import "reset.scss";
+@import "variaveis.scss";
+@import "./mixins/mixinFlexAlign.scss";
+@import "./mixins/mixinHeight&Width";
+@import "btn.scss";
+@import "formButton.scss";
+@import "responsive/login.scss";
+.btn {
+    @include heightWidth(20%,40%);
+}
+
+h1,.msg,.log,.senha,.conta,.btn{
+    color: white;
+}
+h1{
+    font-size: 3vw;
+}
+a,.conta,#cadas{
+    font-size: 1.2vw;
+}
+a{
+    text-decoration: none;
+    &:hover{
+        color: #3C2A21;
+    }
+}
+.msg {
+    font-size: 1.5vw;
+}
+.log {
+    color: white;
+    font-family: 'Arvo', serif;
+    font-size: 1.9vw;
+    // padding: 10%;
+}
+
+#cadas{
+    color: #3C2A21;
+}
+.inf {
+    font-size: 2vw;
+    color: red;
+}
+.container{
+    @include heightWidth(100vh,100vw);
+    background:url(../img/livro2.jpg);
+    background-size: cover;
+    @include flexAlign(center,center,row)
+}
+main{
+    @include heightWidth(70vh,60vw);
+    display: flex;
+}
+.main1{
+    @include flexAlign(start,start,column );
+    padding: 10% 0 0 10%;
+    border-radius: 5% 0 0 5%;
+    flex-basis: 60%; 
+    box-shadow: 0 2vh 2vw 0 #C8B6A6;
+    backdrop-filter: blur( .3vw );
+    border: .1vw solid #C8B6A6;
+}
+.main2{
+    @include flexAlign(start,center,row);
+    padding-top: 10%;
+    border-radius: 0 5% 5% 0;
+    flex-basis: 40%;
+    background: #A4907C;
+}
+form{
+    @include flexAlign(center,start,column);
+    width: 100%;
+    gap: 3vh;
+}
+
+.formButton {
+    @include heightWidth(1%,80%);
+
+    padding: 5%;
+}

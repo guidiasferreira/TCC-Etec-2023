@@ -1,0 +1,35 @@
+@import "./variaveis.scss";
+@import "./mixins/mixinFlexAlign.scss";
+@import "./mixins/mixinHeight&Width.scss";
+@import "./mixins/mixinBg&Color.scss";
+@import "./reset.scss";
+@import "./scroll.scss";
+@import "./header.scss";
+@import "./searchInput.scss";
+@import "./sidebar.scss";
+@import "./carousels.scss";
+@import "./footer.scss";
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3vw;
+}
+.sidebar,.b,main{
+    height: 90vh !important;
+}
+.conteudo {
+    @include flexAlign (center,start,column);
+    @include heightWidth(90vh,90vw);
+    padding-top: 1vh;
+    gap: 10vh;
+    overflow: auto;
+    background-color: $bghColor;
+}
+.meio {
+    @include heightWidth(40vh,100%);
+
+    img {
+        @include heightWidth(100%,100%);
+    }
+}

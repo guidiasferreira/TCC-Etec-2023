@@ -1,0 +1,89 @@
+header {
+    @include flexAlign(center,start,row);
+    @include heightWidth(10vh,100vw);
+    @include bgcolorColor(#2C1A1D,white);
+    padding: 0 2.1%;
+    gap: 12vw;
+    background-size: contain no-repeat;
+
+    a{
+        color: white;
+    }
+
+    .searchContainer {
+        width: 25vw;
+        display: flex;
+    }
+    .logo {
+        @include heightWidth(8vh,25vw);
+        @include flexAlign(center,normal,row);
+        gap: 1vw;
+    
+        .logoimg {
+            @include heightWidth(100%,20%);
+            display: flex;
+            margin-left: .5vw;
+        
+            img {
+                @include heightWidth(100%,100%);
+            }
+        }
+    }
+    nav {
+        @include heightWidth(10vh,20vw);
+        @include flexAlign(center,start,column);
+        position: relative;
+    
+        .categorias {
+            @include flexAlign(center,center,column);
+            @include heightWidth(100%,100%);
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+        }
+        .subMenu {
+            @include bgcolorColor(#9e7871,white);
+            @include heightWidth(25vh,30vw);
+            display: none ;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 10vh;
+            z-index: 3;
+            border-radius: 0 0 1vw 1vw;
+        
+            .particaoUl {
+                @include flexAlign(center,start,column);
+                max-height: 100%;
+                width: 50%;
+                
+                a {
+                    width: 50%;
+                    cursor: pointer;
+                    color: #fff;
+            
+                    &:hover{
+
+                        border-bottom: .1vh solid black;
+                        color: rgb(0, 0, 0);
+                    }
+                }
+            }
+            #particaoUl1 {
+                border-right: .1vw solid #DDDDDD;
+            }
+        }
+        &:hover .categorias {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 1%, rgba(9, 35, 121, 0) 13%, rgba(0, 212, 255, 0) 100%);
+            border-bottom: black solid .2vw;
+        }
+        &:hover .subMenu {
+            display: flex;
+        } 
+    }
+    form {
+        @include flexAlign(center,start,row);
+        height: 100%;
+    }
+}

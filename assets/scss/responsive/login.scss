@@ -1,0 +1,68 @@
+@media only screen and (max-width: 600px) {
+        
+
+    .main2{
+        flex-basis: 100% !important;
+        border-radius: 5% !important;
+        align-items: center !important;
+    }
+
+    h1{
+        font-size: 7vw !important;
+    }
+    
+    .formButton {
+        font-size: 2.8vw !important;
+        &::placeholder {
+            font-size: 2.8vw !important;
+        }
+    }
+
+    main{
+        @include heightWidth(70vh,80vw !important);
+    }
+
+    .main1 {
+        display: none !important;
+    }
+
+    a,.conta,#cadas{
+        font-size: 4.0vw !important;
+    }
+
+    .btn {
+        font-size: 4.6vw !important;
+        padding: 3%;
+    }
+  }
+
+  @media only screen and (min-width: 600px) and (max-width: 1200px) {
+
+    .main1{
+        flex-basis: 50% !important;
+    }
+
+    .main2{
+        flex-basis: 50% !important;
+        
+    }
+
+    h1{
+        font-size: 3vw !important;
+    }
+    
+    .formButton {
+        font-size: 1.5vw !important;
+        &::placeholder {
+            font-size: 1.5vw !important;
+        }
+    }
+
+    a,.conta,#cadas{
+        font-size: 1.9vw !important;
+    }
+
+    .btn {
+        font-size: 2vw !important;
+    }
+  }

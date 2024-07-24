@@ -1,0 +1,120 @@
+.container{
+    display: flex;
+}
+.sidebar,.b {
+    @include flexAlign(center,flex-end,column);
+    @include bgcolorColor($headerColor,white);
+    position: fixed;
+    height: 100vh;    
+    transition: all .3s ease;
+
+    .sidebarContainer{
+        @include flexAlign(center,center,column);
+        height: 80vh;
+        width: 100%;
+        gap: 8vh;
+
+        .divIcon{
+            color: white;
+            @include flexAlign(center,start,row);
+            padding-left: 15%;
+            height: 10vh;
+            border-radius: .52vw;
+            transition: .2s all ease;
+        
+            i {
+                font-size: 2vw;
+            }
+            p{
+                color: white;
+            }
+        
+            &:hover {
+                background-color: #bcaa996e;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    .particao1,.particao3 {
+        width: 100%;
+        justify-content: center;
+    }
+    .particao3 {
+        background-color:#e6d8c9;;
+        height: .1%;
+    }
+    .toggle {
+        @include flexAlign(center,center,row);
+        @include heightWidth(5vh,2.5vw);
+        @include bgcolorColor(#6c534e,#dadada);
+        position: absolute;
+        top: 50%;
+        font-family: boxicons !important;
+        font-size: 1.8vw;
+        border-radius: 50%;
+        border: 0;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &::before {
+            content: "\ea50";
+        }
+    }
+    .button,#input {
+        display: none;
+    }
+    .iconSidebar {
+        font-size: 1.5vw;
+        color: #ffffff;
+    }
+    
+}
+.sidebar {
+    width: 10vw;
+
+    .display-none,input{
+        display: none;
+    }
+    .toggle {
+        right: -10%;
+        transform: translateY(-50%) rotate(0deg);
+    }
+    .divIcon {
+        justify-content: center;
+        width: 5vw;
+    }
+}
+.b {
+    width: 15vw;
+
+    .divIcon{
+        width: 11vw;
+        gap: .3vw;
+    }
+    .display-none {
+        font-size: 1.2vw;
+    }
+    .toggle {
+        right: -8%;
+        transform: translateY(-50%) rotate(180deg);
+    }
+    .divIcon {
+        justify-content: center;
+        padding-left: .3vw;
+    }
+}
+main,.active {
+    margin-left: 10vw;
+    transition: all .3s ease;
+}
+.active {
+    width: 85vw;
+    margin-left: 15vw;
+}
+main {
+    @include flexAlign(start,start,column);
+    @include heightWidth(100vh,90vw);
+    overflow: hidden;
+}

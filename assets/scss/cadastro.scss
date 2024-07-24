@@ -1,0 +1,77 @@
+@import "reset.scss";
+@import "variaveis.scss";
+@import "./mixins/mixinFlexAlign.scss";
+@import "./mixins/mixinHeight&Width";
+@import "btn.scss";
+@import "formButton.scss";
+@import "responsive/cadastro.scss";
+
+h1,.msg,.log,.senha,.conta,.btn{
+    color: white;
+}
+h1{
+    font-size: 3vw;
+}
+a,.conta,#cadas{
+    font-size: 1.2vw;
+}
+a{
+    text-decoration: none;
+    &:hover{
+        color: #3C2A21;
+    }
+}
+.msg {
+    font-size: 1.5vw;
+}
+.log {
+    padding-bottom: 10%;
+    font-family: 'Arvo', serif;
+    font-size: 1.8vw;
+}
+.senha {
+    transition: .2s;
+}
+#cadas{
+    color: #3C2A21;
+}
+.inf {
+    font-size: 2vw;
+    color: red;
+}
+.container{
+    @include heightWidth(100vh,100vw);
+    @include flexAlign(center,center,row);
+    background:url(../img/livro2.jpg);
+    background-size: cover;
+ 
+}
+main{
+    @include heightWidth(70vh,60vw);
+    display: flex;
+}
+.main1{
+    @include flexAlign(start,center,row);
+    padding-top: 6%;  
+    border-radius: 5% 0 0 5%;
+    flex-basis: 40%;
+    background-color: #A4907C;
+}
+.main2{
+    @include flexAlign(start,start,column);
+    padding: 10% 0 0 10%;
+    border-radius: 0 5% 5% 0;
+    flex-basis: 60%;
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 2vh 2vw 0 #C8B6A6;
+    backdrop-filter: blur( .3vw );
+    border: .1vw solid #C8B6A6;
+}
+form{
+    @include flexAlign(center,start,column);
+    width: 100%;
+    gap: 1.5vh;
+}
+.btn{
+    margin-top: 2vh;
+}

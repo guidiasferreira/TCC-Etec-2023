@@ -1,0 +1,107 @@
+@import "./reset.scss";
+@import "./root.scss";
+@import "./variaveis.scss";
+@import "./mixins/mixinFlexAlign.scss";
+@import "./mixins/mixinHeight&Width.scss";
+@import "./mixins/mixinBg&Color.scss";
+@import "./sidebar.scss";
+@import "./btn.scss";
+
+h1 {
+    font-size: 2vw;
+}
+select {
+    width: 100%;
+}
+p {
+    text-align: center;
+    font-size: 1.1vw;
+}
+
+.select2-results__option{
+    padding: 0 !important;
+    line-height: 6vh;
+}
+main {
+    @include flexAlign(center, center, row);
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+
+    .box {
+        @include heightWidth(80%, 90%);
+        display: flex;
+
+        .left,.right,.text {
+            @include flexAlign(center, space-evenly, column);
+        }
+        .left,.right {
+            border-radius: .468vw;
+            @include heightWidth(100%, 50%);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 .41vw 1.66vw 0 rgba(234, 234, 240, 0.37);
+            backdrop-filter: blur(.208vw);
+            -webkit-backdrop-filter: blur(.208vw);
+        }
+        .left {
+            border-radius: .52vw 0 0 .52vw;
+
+            .text {
+                @include heightWidth(100%, 60%);
+            }
+            .divInput {
+                @include flexAlign(center, center, column);
+                // @include flexAlign(start, start, column);
+                @include heightWidth(15%, 90%);
+                // gap: 20%;
+                #nomeLivro {
+                    width: 100%;
+                    padding: 3%;
+                    border-radius: .355vw;
+                    border: none;
+                }   
+            }
+        }
+        .right {
+            justify-content: center;
+            gap: 5%;
+            border-radius: 0 .52vw .52vw 0;
+
+            .picture {
+                @include flexAlign(center, center, row);
+                @include heightWidth(50vh, 60%);
+                @include bgcolorColor(#0000003a, #000000c0);
+                overflow: hidden;
+                border: .14vw dashed currentcolor;
+                border-radius: .29vw;
+                cursor: pointer;
+                transition: color 400ms ease-in-out, background 400ms ease-in-out;
+                outline: none;
+
+                &:hover {
+                    @include bgcolorColor(#ffffff77, #777);
+                }
+                img {
+                    object-fit: contain;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+                .pictureImage {
+                    @include flexAlign(center, center, row);
+                    @include heightWidth(100%, 100%);
+
+                    .pictureImg {
+                        @include heightWidth(100%, 100%);
+                    }
+                }
+            }
+            #input {
+                display: none;
+            }
+            .btn {
+                @include flexAlign(center, center, row);
+                color: rgb(255, 255, 255);
+                background: rgb(0, 0, 0);
+            }
+        }
+    }
+}

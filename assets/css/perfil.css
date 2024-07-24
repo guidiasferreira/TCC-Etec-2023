@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@500;600&family=Arvo&family=Kanit&family=Noto+Sans+TC:wght@500&display=swap%27");
+:root {
+  --swiper-theme-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-family: "Alkatra", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  height: 10vh;
+  width: 100vw;
+  background-color: #2C1A1D !important;
+  color: white !important;
+  padding: 0 2.1%;
+  gap: 12vw;
+  background-size: contain no-repeat;
+}
+header a {
+  color: white;
+}
+header .searchContainer {
+  width: 25vw;
+  display: flex;
+}
+header .logo {
+  height: 8vh;
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: row;
+  gap: 1vw;
+}
+header .logo .logoimg {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  margin-left: 0.5vw;
+}
+header .logo .logoimg img {
+  height: 100%;
+  width: 100%;
+}
+header nav {
+  height: 10vh;
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  position: relative;
+}
+header nav .categorias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+header nav ul {
+  list-style: none;
+}
+header nav .subMenu {
+  background-color: #9e7871 !important;
+  color: white !important;
+  height: 25vh;
+  width: 30vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10vh;
+  z-index: 3;
+  border-radius: 0 0 1vw 1vw;
+}
+header nav .subMenu .particaoUl {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  max-height: 100%;
+  width: 50%;
+}
+header nav .subMenu .particaoUl a {
+  width: 50%;
+  cursor: pointer;
+  color: #fff;
+}
+header nav .subMenu .particaoUl a:hover {
+  border-bottom: 0.1vh solid black;
+  color: rgb(0, 0, 0);
+}
+header nav .subMenu #particaoUl1 {
+  border-right: 0.1vw solid #DDDDDD;
+}
+header nav:hover .categorias {
+  background: linear-gradient(0deg, rgb(0, 0, 0) 1%, rgba(9, 35, 121, 0) 13%, rgba(0, 212, 255, 0) 100%);
+  border-bottom: black solid 0.2vw;
+}
+header nav:hover .subMenu {
+  display: flex;
+}
+header form {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar, .b {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-color: #2C1A1D !important;
+  color: white !important;
+  position: fixed;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+.sidebar .sidebarContainer, .b .sidebarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+  gap: 8vh;
+}
+.sidebar .sidebarContainer .divIcon, .b .sidebarContainer .divIcon {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  padding-left: 15%;
+  height: 10vh;
+  border-radius: 0.52vw;
+  transition: 0.2s all ease;
+}
+.sidebar .sidebarContainer .divIcon i, .b .sidebarContainer .divIcon i {
+  font-size: 2vw;
+}
+.sidebar .sidebarContainer .divIcon p, .b .sidebarContainer .divIcon p {
+  color: white;
+}
+.sidebar .sidebarContainer .divIcon:hover, .b .sidebarContainer .divIcon:hover {
+  background-color: rgba(188, 170, 153, 0.431372549);
+  cursor: pointer;
+}
+.sidebar .particao1, .sidebar .particao3, .b .particao1, .b .particao3 {
+  width: 100%;
+  justify-content: center;
+}
+.sidebar .particao3, .b .particao3 {
+  background-color: #e6d8c9;
+  height: 0.1%;
+}
+.sidebar .toggle, .b .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 5vh;
+  width: 2.5vw;
+  background-color: #6c534e !important;
+  color: #dadada !important;
+  position: absolute;
+  top: 50%;
+  font-family: boxicons !important;
+  font-size: 1.8vw;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sidebar .toggle::before, .b .toggle::before {
+  content: "\ea50";
+}
+.sidebar .button, .sidebar #input, .b .button, .b #input {
+  display: none;
+}
+.sidebar .iconSidebar, .b .iconSidebar {
+  font-size: 1.5vw;
+  color: #ffffff;
+}
+
+.sidebar {
+  width: 10vw;
+}
+.sidebar .display-none, .sidebar input {
+  display: none;
+}
+.sidebar .toggle {
+  right: -10%;
+  transform: translateY(-50%) rotate(0deg);
+}
+.sidebar .divIcon {
+  justify-content: center;
+  width: 5vw;
+}
+
+.b {
+  width: 15vw;
+}
+.b .divIcon {
+  width: 11vw;
+  gap: 0.3vw;
+}
+.b .display-none {
+  font-size: 1.2vw;
+}
+.b .toggle {
+  right: -8%;
+  transform: translateY(-50%) rotate(180deg);
+}
+.b .divIcon {
+  justify-content: center;
+  padding-left: 0.3vw;
+}
+
+main, .active {
+  margin-left: 10vw;
+  transition: all 0.3s ease;
+}
+
+.active {
+  width: 85vw;
+  margin-left: 15vw;
+}
+
+main {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  height: 100vh;
+  width: 90vw;
+  overflow: hidden;
+}
+
+.sidebar, .b, main {
+  height: 90vh;
+}
+
+.searchContainer, .searchBoxIcon, .searchInput, .categorias, nav {
+  display: none !important;
+}
+
+.header a {
+  color: white;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #e3dcd3;
+}
+main .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  gap: 5%;
+}
+main .box h1 {
+  height: 10%;
+  font-size: 3vw;
+}
+main .box .divImg {
+  height: 60%;
+  width: 70%;
+}
+main .box .divImg img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+main .box .btn {
+  height: 7%;
+  width: 30%;
+  background-color: #705548 !important;
+  color: white !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  border: 0.2vw solid black;
+  font-size: 1.5vw;
+  font-family: "Roboto Mono", monospace;
+  padding: 0;
+  border-radius: 17vw;
+}
+
+/*# sourceMappingURL=perfil.css.map */

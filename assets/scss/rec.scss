@@ -1,0 +1,65 @@
+@import "./variaveis.scss";
+@import "./mixins/mixinFlexAlign.scss";
+@import "./mixins/mixinHeight&Width.scss";
+@import "./mixins/mixinBg&Color.scss";
+@import "./reset.scss";
+@import "./root.scss";
+@import "./responsive/recuperar.scss";
+
+.conta {
+    font-size: 1.2vw;
+    color: #ffffff;
+}
+
+
+.log {
+    padding-bottom: 7%;
+    color: #ffffff;
+    font-size: 1.8vw;
+    font-family: 'Arvo', serif;
+}
+
+h1{
+    font-size: 3vw;
+    color: #ffffff;
+}
+
+::placeholder {
+    color: black; 
+}
+
+.container{
+    @include flexAlign (center, center, row);
+    @include heightWidth (100vh,100vw);
+    background:url(../img/livro.jpg);
+    background-size: cover;
+}
+
+
+form{
+    @include flexAlign (center, center, column);
+    @include heightWidth (60vh,40vw);
+    gap: 3vh;
+    border-radius: 5%;
+    border: .2vw solid #943e0f;
+    
+}
+
+input{
+    @include heightWidth (5vh, 70%);
+    padding: 4%;
+	border: none;
+	border-radius: 4vw;
+    font-size: .9vw;
+}
+
+.btn{
+    @include heightWidth (5vh, 10vw);
+    color:white;
+    background: linear-gradient(50deg,#3e1b0a, #a3602d, #653216);
+    cursor: pointer;
+    border:  .1vw solid ;
+    font-size: 1.5vw;
+    font-family: 'Roboto Mono', monospace;
+    padding: 0%;
+}

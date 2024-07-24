@@ -1,0 +1,108 @@
+
+@media only screen and (max-width: 500px) {
+    
+    form{
+        @include heightWidth(80vh,80vw !important);
+    }
+
+    h1{
+        font-size: 6vw !important;
+    }
+
+    .prenc {
+        width: 90% !important;
+        font-size: 3vw !important;
+        &::placeholder {
+            font-size: 3vw !important;
+        }
+    }
+
+    .btn{
+        @include heightWidth (13vh, 17vw !important);
+        font-size: 3vw !important;        
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 500px) {
+
+    .prenc{
+        font-size: 3.5vw !important;
+        &::placeholder {
+            font-size: 3.5vw !important;    
+        }
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+
+    form{
+        @include heightWidth(70vh,70vw !important);
+    }
+
+    
+    h1{
+        font-size: 6vw !important;
+    }
+
+    .prenc {
+        width: 80% !important;
+        font-size: 2.5vw !important;
+        &::placeholder {
+            font-size: 2.5vw !important;
+        }
+    }
+
+    .btn{
+        @include heightWidth (13vh, 17vw !important);
+        font-size: 2.9vw !important;        
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+
+    h1{
+        font-size: 4vw !important;
+    }
+
+    form{
+        @include heightWidth(70vh,70vw !important);
+    }
+
+    .prenc {
+        font-size: 2.2vw !important;
+        &::placeholder {
+            font-size: 2.2vw !important;
+        }
+    }
+
+    .btn{
+        @include heightWidth (13vh, 17vw !important);
+        font-size: 2.5vw !important;        
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+
+    form{
+        @include heightWidth(70vh,50vw !important);
+    }
+
+    
+    h1{
+        font-size: 3vw !important;
+    }
+
+    .prenc {
+        font-size: 1.5vw !important;
+        &::placeholder {
+            font-size: 1.5vw !important;
+        }
+    }
+
+    .btn{
+        @include heightWidth (13vh, 17vw !important);
+        font-size: 2.5vw !important;        
+    }
+
+}

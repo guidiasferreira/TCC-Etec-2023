@@ -1,0 +1,57 @@
+@import "./variaveis.scss";
+@import "./mixins/mixinFlexAlign.scss";
+@import "./mixins/mixinHeight&Width.scss";
+@import "./mixins/mixinBg&Color.scss";
+@import "./reset.scss";
+@import "./sidebar.scss";
+
+header {
+    @include flexAlign(center, center, row);
+    @include bgcolorColor($headerColor, white);
+    height: 10vh;
+}
+a{
+    text-decoration: none;
+}
+.btn {
+
+    font-size: 1.5vw;
+    border: 0;
+    cursor: pointer;
+    --b: .5vh;              /* border thickness */
+    --s: 2vh;              /* size of the corner */
+    --color: #000000;
+    color: black;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    background:conic-gradient(from 90deg at var(--b) var(--b), #ffffff00 90deg, var(--color) 0) var(--s) var(--s)/calc(100% - var(--b) - 2*var(--s)) calc(100% - var(--b) - 2*var(--s));
+}
+.sidebar,.b,main {
+    height: 90vh;
+}
+main{
+    @include flexAlign(center,center,row);
+    background-color: $bghColor;
+    
+    .divImg{
+        @include heightWidth(35%,25%);
+        @include flexAlign(center,center,row);
+
+        img{
+            @include heightWidth(100%,100%);
+            object-fit: contain;
+        }
+    }
+}
+.painel{
+    @include heightWidth(100%,50%);
+    @include flexAlign(center, center, column);
+    background-color: $bghColor;
+    gap: 15vh;
+}
+.box{
+    @include flexAlign(center, center, column);
+}
+.flex{
+    display: flex;
+    gap: 5vw;
+}

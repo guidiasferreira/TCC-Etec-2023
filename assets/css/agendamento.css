@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@500;600&family=Arvo&family=Kanit&family=Noto+Sans+TC:wght@500&display=swap%27");
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-family: "Alkatra", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --swiper-theme-color: #000000;
+  --swiper-navigation-size: 4vh;
+  /* --header-color: #401f00; */
+  /* --header-texture:url("https://www.transparenttextures.com/patterns/retina-wood.png"); */
+  /* --sidebar-color:#402C1B; */
+  --fundo-livro: #e3dcd3;
+  --conteudo-color: #e6d8c9;
+  /* --carrousel-menu:#402C1B; */
+  /* #401f00 */
+}
+
+:root {
+  --swiper-theme-color: #000000;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar, .b {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-color: #2C1A1D !important;
+  color: white !important;
+  position: fixed;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+.sidebar .sidebarContainer, .b .sidebarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+  gap: 8vh;
+}
+.sidebar .sidebarContainer .divIcon, .b .sidebarContainer .divIcon {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  padding-left: 15%;
+  height: 10vh;
+  border-radius: 0.52vw;
+  transition: 0.2s all ease;
+}
+.sidebar .sidebarContainer .divIcon i, .b .sidebarContainer .divIcon i {
+  font-size: 2vw;
+}
+.sidebar .sidebarContainer .divIcon p, .b .sidebarContainer .divIcon p {
+  color: white;
+}
+.sidebar .sidebarContainer .divIcon:hover, .b .sidebarContainer .divIcon:hover {
+  background-color: rgba(188, 170, 153, 0.431372549);
+  cursor: pointer;
+}
+.sidebar .particao1, .sidebar .particao3, .b .particao1, .b .particao3 {
+  width: 100%;
+  justify-content: center;
+}
+.sidebar .particao3, .b .particao3 {
+  background-color: #e6d8c9;
+  height: 0.1%;
+}
+.sidebar .toggle, .b .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 5vh;
+  width: 2.5vw;
+  background-color: #6c534e !important;
+  color: #dadada !important;
+  position: absolute;
+  top: 50%;
+  font-family: boxicons !important;
+  font-size: 1.8vw;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sidebar .toggle::before, .b .toggle::before {
+  content: "\ea50";
+}
+.sidebar .button, .sidebar #input, .b .button, .b #input {
+  display: none;
+}
+.sidebar .iconSidebar, .b .iconSidebar {
+  font-size: 1.5vw;
+  color: #ffffff;
+}
+
+.sidebar {
+  width: 10vw;
+}
+.sidebar .display-none, .sidebar input {
+  display: none;
+}
+.sidebar .toggle {
+  right: -10%;
+  transform: translateY(-50%) rotate(0deg);
+}
+.sidebar .divIcon {
+  justify-content: center;
+  width: 5vw;
+}
+
+.b {
+  width: 15vw;
+}
+.b .divIcon {
+  width: 11vw;
+  gap: 0.3vw;
+}
+.b .display-none {
+  font-size: 1.2vw;
+}
+.b .toggle {
+  right: -8%;
+  transform: translateY(-50%) rotate(180deg);
+}
+.b .divIcon {
+  justify-content: center;
+  padding-left: 0.3vw;
+}
+
+main, .active {
+  margin-left: 10vw;
+  transition: all 0.3s ease;
+}
+
+.active {
+  width: 85vw;
+  margin-left: 15vw;
+}
+
+main {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  height: 100vh;
+  width: 90vw;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 20%;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+}
+main .box {
+  height: 80%;
+  width: 90%;
+  display: flex;
+  border-radius: 0.468vw;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0.41vw 1.66vw 0 rgba(234, 234, 240, 0.37);
+  backdrop-filter: blur(0.43vw);
+  -webkit-backdrop-filter: blur(0.208vw);
+}
+main .box .left, main .box .right {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+main .box .left {
+  border-right: solid 0.1vw rgba(0, 0, 0, 0.493);
+}
+main .box .left .picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 80%;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+}
+main .box .left .picture .pictureImg {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-repeat: no-repeat;
+}
+main .box .left .picture .pictureImg img {
+  border-radius: 1vw;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+main .box .right {
+  align-items: center;
+}
+main .box .right#agendamento {
+  display: none;
+}
+main .box .right#agendamento .titulo {
+  position: relative;
+}
+main .box .right#agendamento #voltarButton {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100%;
+  width: 10%;
+  background-image: url(../img/icons/seta.svg);
+  background-repeat: no-repeat;
+  background-color: rgba(248, 14, 14, 0);
+  border: none;
+  background-size: contain;
+  object-fit: contain;
+}
+main .box .right#agendamento #voltarButton:hover {
+  cursor: pointer;
+}
+main .box .right .agendamento {
+  height: 80%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7%;
+}
+main .box .right .agendamento .titulo {
+  position: relative;
+}
+main .box .right .agendamento .titulo #voltarButton {
+  position: absolute;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100%;
+  width: 80%;
+  background-image: url(../img/icons/seta.svg);
+  background-repeat: no-repeat;
+  border: none;
+  background-size: cover;
+  object-fit: contain;
+}
+main .box .right .agendamento .titulo #voltarButton:hover {
+  cursor: pointer;
+}
+main .box .right .agendamento input {
+  height: 15%;
+}
+main .box .right .agendamento .prenc {
+  width: 100%;
+  padding: 0 4%;
+  border: solid 0.1vw black;
+  border-radius: 15vw;
+  font-size: 1vw;
+}
+main .box .right#informacoes {
+  display: flex;
+}
+main .box .right .informacoes {
+  height: 80%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+}
+main .box .right .informacoes #agendarButton {
+  height: 14%;
+  width: 35%;
+}
+main .box .right .informacoes .info {
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  flex-direction: column;
+  height: 70%;
+  width: 90%;
+  gap: 10%;
+}
+main .box .right .informacoes .info p {
+  font-size: 1.5vw;
+}
+
+.btn {
+  background-color: #8d7373 !important;
+  color: rgb(0, 0, 0) !important;
+  font-size: 1.5vw;
+  width: 40%;
+  border-radius: 20vw;
+  cursor: pointer;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.display-none {
+  display: none !important;
+}
+
+/*# sourceMappingURL=agendamento.css.map */

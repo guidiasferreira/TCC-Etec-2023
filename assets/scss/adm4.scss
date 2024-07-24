@@ -1,0 +1,76 @@
+@import "./variaveis.scss";
+@import "./mixins/mixinFlexAlign.scss";
+@import "./mixins/mixinHeight&Width.scss";
+@import "./mixins/mixinBg&Color.scss";
+@import "./reset.scss";
+@import "./sidebar.scss";
+
+
+
+header {
+    @include flexAlign(center, center, row);
+    @include bgcolorColor($headerColor, white);
+    height: 10vh;
+}
+.sidebar,.b,main {
+    height: 90vh;
+}
+main {
+    @include flexAlign(center, center, column);
+    gap: 2vh;
+    background-color: $bghColor;
+    
+    label{
+
+    .erro{
+        color: red;
+    }    
+    }
+    form{
+        @include flexAlign (center,center,row);
+        gap: 1vw;
+
+        select,#btn{
+            cursor: pointer;
+        }
+        select {
+            color: black;
+            border-color: black;
+            border-radius: 10vw;
+            padding: .2vw 0 .2vw .5vw;
+        }
+        #btn{
+            padding: .4vw 5vw;
+            border-radius: 10vw;
+            border: black solid .1vw;
+        }
+        .divInput{
+            gap: 1vh;
+            
+            button,input{
+                @extend #btn;
+                text-align: center;
+            }
+        }
+    }
+}
+.display-none{
+    &#registro{
+        display: none;
+    }
+    &#label{
+        display: none;
+    }
+    &#btn{
+        display: none;
+    }
+    &.divInput {
+        display: none;
+    }
+}
+.display-flex {
+    &.divInput {
+        display: flex;
+        flex-direction: column;
+    }
+}

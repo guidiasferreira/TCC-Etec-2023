@@ -1,0 +1,169 @@
+@import "reset.scss";
+@import "root.scss";
+@import "variaveis.scss";
+@import "./mixins/mixinFlexAlign.scss";
+@import "./mixins/mixinHeight&Width.scss";
+@import "./mixins/mixinBg&Color.scss";
+@import "sidebar.scss";
+
+a {
+    text-decoration: none;
+}
+.titulo{
+    @include flexAlign(center,center,column);
+    @include heightWidth(20%,100%);
+
+    // background-color:blue;
+}
+main {
+    @include flexAlign(center, center, row);
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+
+    .box {
+        @include heightWidth(80%, 90%);
+        display: flex;
+        border-radius: .468vw;
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 .41vw 1.66vw 0 rgba(234, 234, 240, 0.37);
+        backdrop-filter: blur(.430vw);
+        -webkit-backdrop-filter: blur(.208vw);
+
+        .left,.right {
+            @include flexAlign(normal, normal, column);
+            @include heightWidth(100%, 50%);
+        }
+        .left {
+            border-right: solid .1vw rgba(0, 0, 0, 0.493);
+
+            .picture {
+                @include flexAlign(center, center, row);
+                @include heightWidth(80%,100%);
+                cursor: pointer;
+                outline: none;
+
+                .pictureImg{
+                    @include heightWidth(90%,100%);
+                    @include flexAlign(center,center,row);
+                    background-repeat: no-repeat;
+
+                    img {
+                        border-radius: 1vw;
+                        object-fit: contain;
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+        .right {
+            align-items: center;
+            &#agendamento {
+                display: none;
+
+                .titulo{
+                    position: relative;;
+                }
+                #voltarButton {
+                    position: absolute;
+                    left: 5%;
+                    top: 20%;
+                    @include flexAlign(center, center, row);
+                    height: 100%;
+                    width: 10%;
+                    background-image: url(../img/icons/seta.svg);
+                    background-repeat: no-repeat;
+                    background-color: rgba(248, 14, 14, 0);
+                    border: none;
+                    background-size: contain;
+                    object-fit: contain;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .agendamento {
+                @include heightWidth(80%, 70%);
+                @include flexAlign(center, center, column);
+                gap: 7%;
+                // background-color: red;
+                
+
+                .titulo{
+                    position: relative;
+
+                    #voltarButton {
+                        position: absolute;
+                        left: 5%;
+                        @include flexAlign(center, center, row);
+                        height: 100%;
+                        width: 80%;
+                        background-image: url(../img/icons/seta.svg);
+                        background-repeat: no-repeat;
+                        // background-color: rgba(248, 14, 14, 0);
+                        border: none;
+                        background-size: cover;
+                        object-fit: contain;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                input {
+                    height: 15%;
+                }
+                .prenc {
+                    // height: 50%;
+                    width: 100%;
+                    padding: 0 4%;
+                    border: solid .1vw black;
+                    border-radius: 15vw;
+                    font-size: 1vw;
+                }
+            }
+            &#informacoes{
+                display: flex;
+            }
+            .informacoes {
+               
+                // background-color: red;
+                @include heightWidth(80%,90%);
+                @include flexAlign(center, normal, column);
+
+
+                #agendarButton {
+                    @include heightWidth(14%, 35%);
+                }
+
+                .info {
+                    @include flexAlign(normal, center, column);
+                    @include heightWidth(70%, 90%);
+                    gap: 10%;
+                    // background-color: red;
+
+                    p {
+                        font-size: 1.5vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    @include bgcolorColor(#8d7373, rgb(0, 0, 0));
+    font-size: 1.5vw;
+    width: 40%;
+    border-radius: 20vw;
+    cursor: pointer;
+}
+
+.display-flex {
+    display: flex !important;
+}
+
+.display-none {
+    display: none !important;
+}

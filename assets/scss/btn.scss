@@ -1,0 +1,10 @@
+.btn{
+    @include heightWidth(5vh,40%);
+    cursor: pointer;
+    background: linear-gradient(50deg,#A4907C, #C8B6A6, #A4907C);
+    border:  .1vw solid ;
+    font-size: 1.5vw;
+    font-family: 'Roboto Mono', monospace;
+    padding: 0;
+    border-radius: 17vw;
+}

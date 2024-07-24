@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@500;600&family=Arvo&family=Kanit&family=Noto+Sans+TC:wght@500&display=swap%27");
+:root {
+  --swiper-theme-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-family: "Alkatra", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --swiper-theme-color: #000000;
+  --swiper-navigation-size: 4vh;
+  /* --header-color: #401f00; */
+  /* --header-texture:url("https://www.transparenttextures.com/patterns/retina-wood.png"); */
+  /* --sidebar-color:#402C1B; */
+  --fundo-livro: #e3dcd3;
+  --conteudo-color: #e6d8c9;
+  /* --carrousel-menu:#402C1B; */
+  /* #401f00 */
+}
+
+@media only screen and (max-width: 500px) {
+  form {
+    height: 80vh;
+    width: 80vw !important;
+  }
+  h1 {
+    font-size: 6vw !important;
+  }
+  .prenc {
+    width: 90% !important;
+    font-size: 3vw !important;
+  }
+  .prenc::-moz-placeholder {
+    font-size: 3vw !important;
+  }
+  .prenc::placeholder {
+    font-size: 3vw !important;
+  }
+  .btn {
+    height: 13vh;
+    width: 17vw !important;
+    font-size: 3vw !important;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 500px) {
+  .prenc {
+    font-size: 3.5vw !important;
+  }
+  .prenc::-moz-placeholder {
+    font-size: 3.5vw !important;
+  }
+  .prenc::placeholder {
+    font-size: 3.5vw !important;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+  form {
+    height: 70vh;
+    width: 70vw !important;
+  }
+  h1 {
+    font-size: 6vw !important;
+  }
+  .prenc {
+    width: 80% !important;
+    font-size: 2.5vw !important;
+  }
+  .prenc::-moz-placeholder {
+    font-size: 2.5vw !important;
+  }
+  .prenc::placeholder {
+    font-size: 2.5vw !important;
+  }
+  .btn {
+    height: 13vh;
+    width: 17vw !important;
+    font-size: 2.9vw !important;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  h1 {
+    font-size: 4vw !important;
+  }
+  form {
+    height: 70vh;
+    width: 70vw !important;
+  }
+  .prenc {
+    font-size: 2.2vw !important;
+  }
+  .prenc::-moz-placeholder {
+    font-size: 2.2vw !important;
+  }
+  .prenc::placeholder {
+    font-size: 2.2vw !important;
+  }
+  .btn {
+    height: 13vh;
+    width: 17vw !important;
+    font-size: 2.5vw !important;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+  form {
+    height: 70vh;
+    width: 50vw !important;
+  }
+  h1 {
+    font-size: 3vw !important;
+  }
+  .prenc {
+    font-size: 1.5vw !important;
+  }
+  .prenc::-moz-placeholder {
+    font-size: 1.5vw !important;
+  }
+  .prenc::placeholder {
+    font-size: 1.5vw !important;
+  }
+  .btn {
+    height: 13vh;
+    width: 17vw !important;
+    font-size: 2.5vw !important;
+  }
+}
+.conta {
+  font-size: 1.2vw;
+  color: #ffffff;
+}
+
+.log {
+  padding-bottom: 7%;
+  color: #ffffff;
+  font-size: 1.8vw;
+  font-family: "Arvo", serif;
+}
+
+h1 {
+  font-size: 3vw;
+  color: #ffffff;
+}
+
+::-moz-placeholder {
+  color: black;
+}
+
+::placeholder {
+  color: black;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  background: url(../img/livro.jpg);
+  background-size: cover;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 60vh;
+  width: 40vw;
+  gap: 3vh;
+  border-radius: 5%;
+  border: 0.2vw solid #943e0f;
+}
+
+input {
+  height: 5vh;
+  width: 70%;
+  padding: 4%;
+  border: none;
+  border-radius: 4vw;
+  font-size: 0.9vw;
+}
+
+.btn {
+  height: 5vh;
+  width: 10vw;
+  color: white;
+  background: linear-gradient(50deg, #3e1b0a, #a3602d, #653216);
+  cursor: pointer;
+  border: 0.1vw solid;
+  font-size: 1.5vw;
+  font-family: "Roboto Mono", monospace;
+  padding: 0%;
+} 
+
+/*# sourceMappingURL=rec.css.map */

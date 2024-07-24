@@ -1,0 +1,125 @@
+@import "./variaveis.scss";
+@import "./mixins/mixinFlexAlign.scss";
+@import "./mixins/mixinHeight&Width.scss";
+@import "./mixins/mixinBg&Color.scss";
+@import "./reset.scss";
+@import "./root.scss";
+
+@import "./sidebar.scss";
+@import "./header.scss";
+@import "./searchInput.scss";
+
+/* corrigir estilo da barra */
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 5vw;
+}
+::-webkit-scrollbar {
+    width: 1vw;               /* width of the entire scrollbar */
+}
+  
+
+::-webkit-scrollbar {
+    background-color: $headerColor; 
+    // border-radius: 5vw;
+}
+
+main{
+    // overflow: hidden;
+    @include flexAlign(normal,normal,column);
+}
+header{
+    .subMenu{
+        overflow: auto !important;
+    }
+
+}
+
+.sidebar,.b,main,.container{
+    height: 90vh !important;
+}
+header{
+    display: flex;
+    @include heightWidth(10vh,100vw);
+    background-color: $headerColor; 
+
+    a{
+        color:white;
+    }
+}
+p {
+    text-decoration: none;
+    font-size: 1.3vw;
+}
+main{
+    height: inherit;
+    overflow: auto !important;
+}
+.column{
+        background-color: var(--conteudo-color);
+        border-bottom: .2vw black solid;
+        display: grid;
+        place-items: center;
+        border: black .1vw solid;
+
+}
+
+.vazio{
+    grid-area: vazio;
+    background-color: $headerColor;
+    border: 0;
+}
+.devolucao{
+    grid-area: devolucao;
+}
+.pessoa{
+    grid-area: pessoa;
+    border-left: 0;
+}
+.livro{
+    grid-area: livro;
+}
+.data{
+    grid-area: data;
+}
+.rg{
+    grid-area: rg;
+    border-right: .1vw rgb(0, 0, 0) solid;
+}
+
+// #box{
+//     position: fixed
+// }
+.box{
+    @include heightWidth(10vh,100%);
+    display: grid;
+    grid-template-areas: "pessoa livro data devolucao rg";
+    grid-template-columns: repeat(5, 1fr);
+    
+}
+.conteudo {
+    overflow: hidden;
+    @include flexAlign(normal,normal,column);
+    width: 100%;
+    height: 11%;
+    background-color: var(--conteudo-color);
+
+    // .rg{
+    //     border-right: 0;
+    // }
+}
+.dados-alunos{
+    height: 89%;
+    overflow-y: scroll;
+    background-color: var(--conteudo-color);
+    
+
+}
+.box1{
+    grid-template-areas: "pessoa livro data devolucao rg vazio";
+    grid-template-columns: repeat(5, 1fr) 1vw;
+    // height: 10vh;
+}
+.border-right{
+    border-right: .1vw;
+}

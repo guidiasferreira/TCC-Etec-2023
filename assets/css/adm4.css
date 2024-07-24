@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@500;600&family=Arvo&family=Kanit&family=Noto+Sans+TC:wght@500&display=swap%27");
+:root {
+  --swiper-theme-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-family: "Alkatra", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar, .b {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-color: #2C1A1D !important;
+  color: white !important;
+  position: fixed;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+.sidebar .sidebarContainer, .b .sidebarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+  gap: 8vh;
+}
+.sidebar .sidebarContainer .divIcon, .b .sidebarContainer .divIcon {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  padding-left: 15%;
+  height: 10vh;
+  border-radius: 0.52vw;
+  transition: 0.2s all ease;
+}
+.sidebar .sidebarContainer .divIcon i, .b .sidebarContainer .divIcon i {
+  font-size: 2vw;
+}
+.sidebar .sidebarContainer .divIcon p, .b .sidebarContainer .divIcon p {
+  color: white;
+}
+.sidebar .sidebarContainer .divIcon:hover, .b .sidebarContainer .divIcon:hover {
+  background-color: rgba(188, 170, 153, 0.431372549);
+  cursor: pointer;
+}
+.sidebar .particao1, .sidebar .particao3, .b .particao1, .b .particao3 {
+  width: 100%;
+  justify-content: center;
+}
+.sidebar .particao3, .b .particao3 {
+  background-color: #e6d8c9;
+  height: 0.1%;
+}
+.sidebar .toggle, .b .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 5vh;
+  width: 2.5vw;
+  background-color: #6c534e !important;
+  color: #dadada !important;
+  position: absolute;
+  top: 50%;
+  font-family: boxicons !important;
+  font-size: 1.8vw;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sidebar .toggle::before, .b .toggle::before {
+  content: "\ea50";
+}
+.sidebar .button, .sidebar #input, .b .button, .b #input {
+  display: none;
+}
+.sidebar .iconSidebar, .b .iconSidebar {
+  font-size: 1.5vw;
+  color: #ffffff;
+}
+
+.sidebar {
+  width: 10vw;
+}
+.sidebar .display-none, .sidebar input {
+  display: none;
+}
+.sidebar .toggle {
+  right: -10%;
+  transform: translateY(-50%) rotate(0deg);
+}
+.sidebar .divIcon {
+  justify-content: center;
+  width: 5vw;
+}
+
+.b {
+  width: 15vw;
+}
+.b .divIcon {
+  width: 11vw;
+  gap: 0.3vw;
+}
+.b .display-none {
+  font-size: 1.2vw;
+}
+.b .toggle {
+  right: -8%;
+  transform: translateY(-50%) rotate(180deg);
+}
+.b .divIcon {
+  justify-content: center;
+  padding-left: 0.3vw;
+}
+
+main, .active {
+  margin-left: 10vw;
+  transition: all 0.3s ease;
+}
+
+.active {
+  width: 85vw;
+  margin-left: 15vw;
+}
+
+main {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  height: 100vh;
+  width: 90vw;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #2C1A1D !important;
+  color: white !important;
+  height: 10vh;
+}
+
+.sidebar, .b, main {
+  height: 90vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vh;
+  background-color: #e3dcd3;
+}
+main label .erro {
+  color: red;
+}
+main form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1vw;
+}
+main form select, main form #btn, main form .divInput button, main form .divInput input {
+  cursor: pointer;
+}
+main form select {
+  color: black;
+  border-color: black;
+  border-radius: 10vw;
+  padding: 0.2vw 0 0.2vw 0.5vw;
+}
+main form #btn, main form .divInput button, main form .divInput input {
+  padding: 0.4vw 5vw;
+  border-radius: 10vw;
+  border: black solid 0.1vw;
+}
+main form .divInput {
+  gap: 1vh;
+}
+main form .divInput button, main form .divInput input {
+  text-align: center;
+}
+
+.display-none#registro {
+  display: none;
+}
+.display-none#label {
+  display: none;
+}
+.display-none#btn, main form .divInput button.display-none, main form .divInput input.display-none {
+  display: none;
+}
+.display-none.divInput {
+  display: none;
+}
+
+.display-flex.divInput {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=adm4.css.map */

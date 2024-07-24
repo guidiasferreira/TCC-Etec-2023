@@ -1,0 +1,64 @@
+@import "./variaveis.scss";
+@import "./mixins/mixinFlexAlign.scss";
+@import "./mixins/mixinHeight&Width.scss";
+@import "./mixins/mixinBg&Color.scss";
+@import "./reset.scss";
+@import "./root.scss";
+@import "./scroll.scss";
+@import "./header.scss";
+@import "./searchInput.scss";
+@import "./sidebar.scss";
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3vw;
+}
+.sidebar,.b,main{
+    height: 90vh;
+}
+.conteudo {
+
+    @include flexAlign (center,start,column);
+    @include heightWidth(100%,100%);
+    padding-top: 1vh;
+    // gap: 10vh;
+    overflow: auto;
+    background-color: var(--conteudo-color);
+}
+
+.teste{
+    width: 90%;
+    display: flex;
+
+}
+
+.divBox{
+    @include flexAlign(start,start,row);
+    gap: 6.48%;
+    row-gap: 5vh;
+    max-width: 100%;
+    width: 100%;
+    // background-color: #e6d8c9;  
+    flex-wrap: wrap;
+
+    .box{
+        @include heightWidth(50vh,14.814814814815%);
+        @include flexAlign(center,center,column);
+        background-color:white ;
+        gap: 4%;
+        font-size: 1vw;
+        box-shadow: 0 10px 22px rgb(0,0,0);
+    
+        .boxText{
+            @include heightWidth(20%,100%);
+            @include bgcolorColor(black,white);
+            @include flexAlign(center,center,row);
+        }
+    
+        img{
+            @include heightWidth(70%,90%);
+        }
+    }
+}
+
